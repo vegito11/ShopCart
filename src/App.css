@@ -1,22 +1,24 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
+:root{
+  --deep-violet:#130f40;
+  --grey-2:#535c68;
+  --grey-5:#2C3A47;
+  --mixed-dark-blue:#30336b;
+  --decent-blue:#0652DD;
+  --blue-2:#227093;
+  --blue-3:#227093;
+  --blue-4:#0a3d62;
+  --blue-5:#182C61;
+  --pink-1:#FDA7DF;
+  --pink-2:#D980FA;
+  --pink-3:#EA2027;
+  --pink-4:#b71540;
+  --green-3:#218c74;
+  --purple-3:#40407a;
+  --purple-4:#2c2c54;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #09d3ac;
+body{
+  font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+  background: var(--grey-5);
+  color: snow ;
 }
