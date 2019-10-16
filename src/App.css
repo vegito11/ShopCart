@@ -3,6 +3,7 @@
   --deep-violet:#130f40;
   --grey-2:#535c68;
   --grey-5:#2C3A47;
+  --mixed:rgba(#12c2e9,#c471ed,#2C5364);
   --mixed-dark-blue:#30336b;
   --decent-blue:#0652DD;
   --blue-2:#227093;
@@ -19,6 +20,23 @@
 }
 body{
   font-family: Verdana, Geneva, Tahoma, sans-serif !important;
-  background: var(--grey-5);
+  background: #141E30;  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to right, #243B55, #141E30); 
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, #243B55, #141E30);
+
   color: snow ;
+}
+.txt-blue{
+  color:var(--pink-4);
+}
+.txt-black{
+  color:black;
+}
+.txt-snow{
+  color:snow;
+}
+.txt-bold{
+  font-size: 800;
 }

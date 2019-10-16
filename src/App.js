@@ -8,6 +8,7 @@ import ProductDetails from './Components/ProductDetails';
 import Cart from './Components/Cart';
 import Default from './Components/Default';
 import {ProductProvider} from './Components/ProductProvider'
+import Modal from './Components/Modal';
 function App() {
   return (
     <Router>
@@ -21,8 +22,9 @@ function App() {
                 <Route path="/" exact strict component={ProductList} ></Route>
                 <Route component={Default} ></Route>
             </Switch>
+            <Modal></Modal>
           </ProductProvider>
- 
+
           </div>
     </Router>
     

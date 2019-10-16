@@ -11,10 +11,12 @@ export default class ProductList extends Component {
         return (
             <div className="py-5">
                 <div className="container">
+                    {/* Title */}
                     <Title/>                    
                     <div className="row">                        
                         <ProductConsumer>
                         {(list)=>{                            
+                            // console.log(list)                            
                             return list.products.map((mobile)=> {
                                     return <Product key={mobile.id} product={mobile} />
                                 })
