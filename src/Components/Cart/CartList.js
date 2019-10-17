@@ -12,8 +12,7 @@ export class CartList extends Component {
                 return (
                         <CartItems key={item.id} value={value} item={item} />                        
                     )}
-            ) }
-                <CartTotal value={value}></CartTotal>
+            ) }                
             </div>
         )
     }

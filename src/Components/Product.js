@@ -48,11 +48,10 @@ const ProductWrapper = styled.div`
     .card{
         border-color:transparent;
         border-top:transparent;
-        transition: all 1s linear;
+        
     }
     .card-footer{
-        border-color:transparent;
-        transition: all 1s linear;
+        border-color:transparent;        
     }
     &:hover{
         .card{
@@ -62,15 +61,14 @@ const ProductWrapper = styled.div`
     }
     .img-container{
         position:relative;
-        transition: all 1s linear;
+        transition: all 0.8s ease-in-out;
         overflow:hidden;
     }
     .img-container:hover .card-img-top {
-        transform:scale(1.4);        
+        transform:scale(1.4);
     }
     .card-img-top{
-        transition:all 1s linear;
-        transition:background 0.1s linear;
+        transition:transform 1s ease-in-out,background 1s ease-in-out;        
     }
     .cart-btn {
         position:absolute;

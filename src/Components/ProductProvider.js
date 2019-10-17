@@ -82,17 +82,41 @@ class ProductProvider extends Component {
         this.setState(()=>({modalOpen:false}))
     }
     /* Increment the count */
-    incrementCount = (id)=>{
-        console.log(" Incremented Counter ");        
+    incrementCount = (id)=>{        
+        let tmpProduct = [...this.state.products]
+        let currentProduct = this.getItem(id)
+        currentProduct.count+=1;
+        currentProduct.total= currentProduct.price * currentProduct.count ;        
+        let tmpCart = [...this.state.cart]
+        /* . If the current item passes the condition, it gets sent to the new array.  */
+        // tmpCart = tmpCart.filter(item => item.id !== id )
+        // console.log(tmpCart);
+        
+        this.setState(()=>({cart:tmpCart,products:tmpProduct}),()=> this.getTotals())
+        console.log(" Incremented Counter ");
     }
     /* Decrement current Item Count */
     decrementCount = (id)=>{
-        console.log(" Decremented Counter ");        
+        console.log(" Decremented Counter "); 
+            /* copy by value  */
+            let tmpCart = [...this.state.cart]
+
+            let currentItem = tmpCart.find(item => item.id ===id )
+            const index = tmpCart.indexOf(currentItem)
+            /* Copy by referance  */
+            const product = tmpCart[index];
+            if(product.count>1)
+                product.count-=1;
+            product.total= parseFloat(product.price) * product.count
+    
+            this.setState(()=>({cart:[...tmpCart],}),()=> this.getTotals())
+            
     }
     /* Remove Item from cart */
     removeItem = (id)=>{
         console.log(" Remove Item ",id);
         let tmpProduct = [...this.state.products]
+        /* refernce of state product  */
         let currentProduct = this.getItem(id)
         currentProduct.count=0;
         currentProduct.total=0;
@@ -100,7 +124,7 @@ class ProductProvider extends Component {
         let tmpCart = [...this.state.cart]
         /* . If the current item passes the condition, it gets sent to the new array.  */
         tmpCart = tmpCart.filter(item => item.id !== id )
-        console.log(tmpCart);
+        // console.log(tmpCart);
         
         this.setState(()=>({cart:tmpCart,products:tmpProduct}),()=> this.getTotals())
     }
@@ -113,6 +137,9 @@ class ProductProvider extends Component {
     /*  Update the State for Final Price  */
     getTotals = ()=>{
         let tmp_subTotal = 0;
+        // console.log("totaling");
+        // console.log(this.state.cart);
+        
         this.state.cart.map(item => (tmp_subTotal+=item.total) );
         let tmp_tax = parseFloat((tmp_subTotal * 0.15 ).toFixed(2));
         let tmp_cartTotal = tmp_subTotal + tmp_tax ; 
@@ -122,7 +149,9 @@ class ProductProvider extends Component {
                 cartTax:tmp_tax,
                 cartTotal:tmp_cartTotal
             }
-        })
+        },() => console.log(this.state.cartTotal)
+        
+        )
     }
     render() {
         return (

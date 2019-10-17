@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import EmptyCart from './EmptyCart';
 import CartHeaders from './CartHeaders';
 import CartList from './CartList';
+import CartTotal from './CartTotal';
 import {ProductConsumer} from '../ProductProvider';
 export default class Store extends Component {
     render() {
@@ -17,7 +18,9 @@ export default class Store extends Component {
                     else 
                         return (<>
                             <CartHeaders/>
-                            <CartList value={values}/></>
+                            <CartList value={values}/>
+                            <CartTotal value={values}></CartTotal>
+                            </>
                             )
                 }
             }
