@@ -42,15 +42,16 @@ export default class ProductDetails extends Component {
                                     </ButtonContainer>                                
                                 </Link>
                                 {/* add to cart button */}
-                                <ButtonContainer cart className="" 
-                                    disabled={inCart?true:false}
-                                    onClick={ ()=> {value.addToCart(id)} }
-                                    onClick={ ()=> {value.openModal(id)} }
-                                >
-                                    {inCart?
-                                    (<p className="text-capitalize mb-0"> In Cart </p>):
-                                    (<i className="fas fa-cart-plus"></i>)}
-                                </ButtonContainer>
+                                <Link to="/cart">
+                                    <ButtonContainer cart className="" 
+                                        disabled={inCart?true:false}
+                                        onClick={ ()=> {value.addToCart(id)} }                                    
+                                    >
+                                        {inCart?
+                                        (<p className="text-capitalize mb-0"> In Cart </p>):
+                                        (<i className="fas fa-cart-plus"></i>)}
+                                    </ButtonContainer>
+                                </Link>
                             </div>
                         </div>
                         </div>

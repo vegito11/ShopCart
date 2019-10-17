@@ -9,7 +9,7 @@ class CartTotal extends Component {
         const {subTotal,cartTax,cartTotal,clearCart} = this.props.value;
         return (
             <div className="container">
-                <div className="row ">
+                <div className="row text-center ">
                     <div className="col-md-6 mx-auto bg-dark-blue col-10 col-lg-8 cart-container py-2">
                         <h3 > Price Details </h3>
                         <hr />
