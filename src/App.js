@@ -1,11 +1,10 @@
 import React from 'react';
-
 import './App.css';
 import { BrowserRouter  as Router,Route,Switch } from 'react-router-dom';
 import Navbar from './Components/Navbar';
 import ProductList from './Components/ProductList';
 import ProductDetails from './Components/ProductDetails';
-import Cart from './Components/Cart';
+import Cart from './Components/Cart/Cart';
 import Default from './Components/Default';
 import {ProductProvider} from './Components/ProductProvider'
 import Modal from './Components/Modal';

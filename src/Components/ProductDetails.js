@@ -30,7 +30,7 @@ export default class ProductDetails extends Component {
                                 <h3 className="text-muted mb-2"> Made By : 
                                     <span className="text-uppercase"> {company}</span> 
                                 </h3>
-                                <h5>Price : <span>$ </span>{price*173} </h5>
+                                <h5>Price : <span>$ </span>{price} </h5>
                                 <h4 className="mb-1 mt-3 txt-bold txt-black"> Some info about Product </h4>
                                 <p className="text-info">
                                     {info}

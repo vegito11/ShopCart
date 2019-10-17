@@ -18,8 +18,8 @@ export class Modal extends Component {
                         return(
                             <ModalContainer>
                             <div className="container">
-                            <div className="row bg-danger">
-                            <div className="col-8 col-lg-4 mx-auto col-md-6 text-center bg-info
+                            <div className="row ">
+                            <div className="col-8 col-lg-4 mx-auto col-md-6 text-center 
                             text-capitalize p-5"
                             id="modal"
                             >
@@ -31,11 +31,13 @@ export class Modal extends Component {
                                             Go Back
                                     </ButtonContainer>
                                     {/* add to cart button */}
-                                    <ButtonContainer cart className="" 
-                                        onClick={()=> closeModal() }
-                                    >
-                                        Cart
-                                    </ButtonContainer>
+                                    <Link to="/cart">
+                                        <ButtonContainer cart className="" 
+                                            onClick={()=> closeModal() }
+                                        >
+                                            Cart
+                                        </ButtonContainer>
+                                    </Link>
                                 </div>                                
                             </div>
                             </div>

@@ -1,9 +1,9 @@
 import React from 'react'
 
-function Title() {
+function Title(props) {
     return (
-        <div className="text-align-center text-capitalize d-flex ">
-            <p className="text-primary display-4 mx-auto"> our Products </p>            
+        <div className="text-align-center text-capitalize d-flex text-title">
+            <p className="text-primary display-4 mx-auto"> {props.name} </p>            
         </div>
     )
 }

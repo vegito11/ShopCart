@@ -40,3 +40,25 @@ body{
 .txt-bold{
   font-size: 800;
 }
+.text-title{
+  font-family: "Permanent Marker", cursive;
+  /* standard gradient background */
+  background: linear-gradient(to right,#2980B9, #6DD5FA,white);
+
+  /* clip hackery */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+hr{
+  background: rgba(191, 218, 215, 0.3);
+}
+.cart-container{
+  border: 2px solid black;
+  outline: none;
+  border: none;
+  border-radius: 0.7rem;
+
+}
+.bg-dark-blue{
+  background: var(--grey-5);
+}

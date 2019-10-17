@@ -12,7 +12,7 @@ export default class ProductList extends Component {
             <div className="py-5">
                 <div className="container">
                     {/* Title */}
-                    <Title/>                    
+                    <Title name="our prodcuts"/>                    
                     <div className="row">                        
                         <ProductConsumer>
                         {(list)=>{                            
